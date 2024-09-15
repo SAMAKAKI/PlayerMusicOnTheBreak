@@ -4,15 +4,18 @@
     "beforeBuildCommand": "yarn build",
     "beforeDevCommand": "yarn cross-env BROWSER=none yarn dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../build"
+    "distDir": "../dist"
   },
   "package": {
     "productName": "playermusiconbreak",
     "version": "0.1.0"
   },
   "tauri": {
+    "security": {
+      "csp": null
+    },
     "allowlist": {
-      "all": false
+      "all": true
     },
     "bundle": {
       "active": true,
@@ -29,7 +32,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.playermusiconthebreak.samakaki",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -46,9 +49,6 @@
         "digestAlgorithm": "sha256",
         "timestampUrl": ""
       }
-    },
-    "security": {
-      "csp": null
     },
     "updater": {
       "active": false

@@ -421,6 +421,11 @@
   dependencies:
     "@swc/counter" "^0.1.3"
 
+"@tauri-apps/api@1.6.0", "@tauri-apps/api@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@tauri-apps/api/-/api-1.6.0.tgz#745b7e4e26782c3b2ad9510d558fa5bb2cf29186"
+  integrity sha512-rqI++FWClU5I2UBp4HXFvl+sBWkdigBkxnpJDQUWttNyG7IZP4FwQGhTNL5EOw0vI8i6eSAJ5frLqO7n7jbJdg==
+
 "@tauri-apps/cli-darwin-arm64@1.6.1":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@tauri-apps/cli-darwin-arm64/-/cli-darwin-arm64-1.6.1.tgz#a68818c14c0c4c0d799e006c3535c2cd33f0d13d"
@@ -1744,6 +1749,12 @@ tailwindcss@^3.4.10:
     postcss-selector-parser "^6.0.11"
     resolve "^1.22.2"
     sucrase "^3.32.0"
+
+"tauri-plugin-store-api@https://github.com/tauri-apps/tauri-plugin-store#v1":
+  version "0.0.0"
+  resolved "https://github.com/tauri-apps/tauri-plugin-store#2352f0bda53b4725ef1d2f51cd5774e4396a20d1"
+  dependencies:
+    "@tauri-apps/api" "1.6.0"
 
 text-table@^0.2.0:
   version "0.2.0"

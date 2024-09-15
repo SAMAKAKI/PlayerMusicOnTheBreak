@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Home, Proposals } from './pages'
 import { MainLayout } from './layouts'
+import { StoreProvider } from './providers/storeProvider'
 
 const router = createBrowserRouter([
   {path: '/', element: <MainLayout />, children: [
@@ -14,6 +15,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <StoreProvider>
+      <RouterProvider router={router} />
+    </StoreProvider>
   </StrictMode>,
 )
