@@ -5,7 +5,7 @@ import { FaPlay, FaPause, FaStepBackward, FaStepForward } from 'react-icons/fa'
 import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from 'react-icons/hi2'
 
 interface AudioPlayerProps {
-  tracks: string[] // URL or path to the audio file
+  tracks: string[]
 }
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
@@ -49,13 +49,13 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
   const handleMute = () => {
     if (audioRef.current) {
       if (!isMute) {
-        setVolume(audioRef.current.volume) // Сохраняем текущее значение громкости
+        setVolume(audioRef.current.volume)
         audioRef.current.volume = 0
         if (volumeRef.current) {
           volumeRef.current.value = '0'
         }
       } else {
-        audioRef.current.volume = volume // Возвращаем сохранённую громкость
+        audioRef.current.volume = volume 
         if (volumeRef.current) {
           volumeRef.current.value = String(volume)
         }
@@ -68,7 +68,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ tracks }) => {
     const newVolume = parseFloat(event.target.value)
     if (audioRef.current) {
       audioRef.current.volume = newVolume
-      setVolume(newVolume) // Обновляем текущее значение громкости
+      setVolume(newVolume) 
       if (newVolume === 0) {
         setIsMute(true)
       } else {
